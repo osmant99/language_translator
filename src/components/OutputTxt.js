@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import { Grid, TextField } from "@mui/material";
-const OutputTxt = ({ outputText, setOutputText, fetchErr }) => {
+import { FaCopy } from "react-icons/fa";
+const OutputTxt = ({
+  outputText,
+  setOutputText,
+  fetchErr,
+  handleCopyOutput,
+}) => {
   return (
     <>
-      <Grid item xs={12}>
+      <Grid item xs={6}>
         <TextField
           label="Translated Text"
           fullWidth
@@ -16,6 +22,7 @@ const OutputTxt = ({ outputText, setOutputText, fetchErr }) => {
             readOnly: true,
           }}
         />
+        <FaCopy role="button" onClick={handleCopyOutput} />
       </Grid>
     </>
   );

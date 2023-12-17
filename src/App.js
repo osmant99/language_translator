@@ -45,6 +45,34 @@ const App = () => {
       setLoading(false);
     }
   };
+  const handleCopyOutput = () => {
+    if (outputText) {
+      navigator.clipboard
+        .writeText(outputText)
+        .then(() => {
+          console.log("Text copied to clipboard");
+        })
+        .catch((error) => {
+          console.error("Error copying text to clipboard:", error);
+        });
+    } else {
+      console.warn("No text to copy");
+    }
+  };
+  const handleCopyInput = () => {
+    if (inputText) {
+      navigator.clipboard
+        .writeText(inputText)
+        .then(() => {
+          console.log("Text copied to clipboard");
+        })
+        .catch((error) => {
+          console.error("Error copying text to clipboard:", error);
+        });
+    } else {
+      console.warn("No text to copy");
+    }
+  };
   return (
     <>
       <LanguageTranslator
@@ -59,6 +87,8 @@ const App = () => {
         setOutputText={setOutputText}
         handleTranslate={handleTranslate}
         fetchErr={fetchErr}
+        handleCopyOutput={handleCopyOutput}
+        handleCopyInput={handleCopyInput}
       />
     </>
   );

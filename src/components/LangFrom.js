@@ -1,10 +1,12 @@
 import React from "react";
-import { Grid, Select, MenuItem } from "@mui/material";
+import { Grid, Select, MenuItem, InputLabel } from "@mui/material";
 import countries from "../countries";
+
 const LangFrom = ({ TranslateFrom, setTransFrom }) => {
   return (
     <>
       <Grid item xs={6}>
+        <InputLabel>Source language</InputLabel>
         <Select
           label="Source Language"
           variant="outlined"

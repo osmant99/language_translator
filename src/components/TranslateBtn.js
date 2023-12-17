@@ -9,6 +9,7 @@ const TranslateBtn = ({ loading, inputText, handleTranslate }) => {
           color="primary"
           disabled={loading || !inputText}
           onClick={handleTranslate}
+          size="large"
         >
           {loading ? (
             <>
