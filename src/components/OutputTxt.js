@@ -9,7 +9,7 @@ const OutputTxt = ({
 }) => {
   return (
     <>
-      <Grid item xs={12}>
+      <Grid item xs={6}>
         <TextField
           label="Translated Text"
           fullWidth
@@ -22,7 +22,6 @@ const OutputTxt = ({
             readOnly: true,
           }}
         />
-        <FaCopy role="button" onClick={handleCopyOutput} />
       </Grid>
     </>
   );

@@ -30,7 +30,7 @@ const LanguageTranslator = ({
             Language Translator
           </Typography>
           <Grid container spacing={3}>
-            <Grid className="input_copy" item xs={12}>
+            <Grid className="input_copy" item xs={6}>
               <TextField
                 label="Enter text to translate"
                 fullWidth
@@ -40,8 +40,13 @@ const LanguageTranslator = ({
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
               />
-              <FaCopy role="button" onClick={handleCopyInput} />
             </Grid>
+            <OutputTxt
+              outputText={outputText}
+              setOutputText={setOutputText}
+              fetchErr={fetchErr}
+              handleCopyOutput={handleCopyOutput}
+            />
 
             <LangFrom
               TranslateFrom={TranslateFrom}
@@ -53,12 +58,6 @@ const LanguageTranslator = ({
               loading={loading}
               inputText={inputText}
               handleTranslate={handleTranslate}
-            />
-            <OutputTxt
-              outputText={outputText}
-              setOutputText={setOutputText}
-              fetchErr={fetchErr}
-              handleCopyOutput={handleCopyOutput}
             />
           </Grid>
         </Paper>
