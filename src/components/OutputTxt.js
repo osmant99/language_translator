@@ -9,7 +9,7 @@ const OutputTxt = ({
 }) => {
   return (
     <>
-      <Grid item xs={6}>
+      <Grid item xs={12}>
         <TextField
           label="Translated Text"
           fullWidth

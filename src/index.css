@@ -1,6 +1,6 @@
 svg {
   position: relative;
-  right: -90%;
+  right: -95%;
   top: 7%;
   width: 36px;
   min-width: 36px;
@@ -15,18 +15,13 @@ svg:hover {
   color: steelblue;
   outline: none;
 }
-@media (min-width: 375px) {
-  svg {
-    right: -65%;
-  }
-}
-@media (min-width: 450px) {
-  svg {
-    right: -75%;
-  }
-}
-@media (min-width: 575px) {
+@media (max-width: 410px) {
   svg {
     right: -85%;
+  }
+}
+@media (max-width: 875px) {
+  svg {
+    right: -90%;
   }
 }
